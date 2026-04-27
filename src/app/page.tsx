@@ -7,6 +7,7 @@ import { WhyJoin } from "@/components/sections/WhyJoin";
 import { BeaverHacksBanner } from "@/components/sections/BeaverHacksBanner";
 import { Events } from "@/components/sections/Events";
 import { EBoard } from "@/components/sections/EBoard";
+import { Partners } from "@/components/sections/Partners";
 import { Join } from "@/components/sections/Join";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <WhyJoin />
         <Events />
         <EBoard />
+        <Partners />
         <Join />
       </main>
       <Footer />

@@ -9,8 +9,8 @@ import Image from "next/image";
 const socials = [
   {
     name: "Instagram",
-    handle: "@ccny.wics",
-    href: "https://instagram.com/ccny.wics",
+    handle: "@wics.ccny",
+    href: "https://www.instagram.com/wics.ccny/",
     description: "Events, updates & community moments",
     gradient: "from-pink-400 via-purple-400 to-yellow-400",
     icon: (
@@ -22,7 +22,7 @@ const socials = [
   {
     name: "Discord",
     handle: "WiCS CCNY",
-    href: "#",
+    href: "https://discord.gg/ezP92mWv9F",
     description: "Chat, resources & club announcements",
     gradient: "from-indigo-500 to-blue-600",
     icon: (
@@ -34,7 +34,7 @@ const socials = [
   {
     name: "LinkedIn",
     handle: "WiCS @ CCNY",
-    href: "#",
+    href: "https://www.linkedin.com/company/women-in-computer-science-at-ccny/",
     description: "Professional updates & opportunities",
     gradient: "from-blue-600 to-blue-700",
     icon: (
@@ -104,28 +104,32 @@ export function Join() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button href="#" external size="lg">
+                <Button href="https://linktr.ee/wics_ccny" external size="lg">
                   Open Linktree ✦
                 </Button>
-                <Button href="mailto:wics@ccny.cuny.edu" variant="secondary" size="lg">
+                <Button href="mailto:wics.ccny@gmail.com" variant="secondary" size="lg">
                   Email Us
                 </Button>
               </div>
 
-              {/* QR code placeholder */}
+              {/* Linktree QR code */}
               <div className="mt-10 inline-flex flex-col items-center gap-3">
-                <div className="w-28 h-28 rounded-2xl bg-lavender-50 border-2 border-lavender-200 border-dashed flex items-center justify-center">
-                  {/* Replace with: <Image src="/qr-linktree.png" alt="Linktree QR" fill className="object-contain p-2" /> */}
-                  <div className="text-center">
-                    <div className="text-2xl mb-1">📱</div>
-                    <p className="font-body text-[10px] text-slate-400 leading-tight">
-                      QR Code
-                      <br />
-                      Coming Soon
-                    </p>
-                  </div>
-                </div>
-                <p className="font-body text-xs text-slate-400">
+                <a
+                  href="https://linktr.ee/wics_ccny"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open WiCS Linktree"
+                  className="relative w-32 h-32 rounded-2xl bg-white p-3 border border-lavender-200 shadow-card hover:shadow-card-hover transition-shadow"
+                >
+                  <Image
+                    src="/qr-linktree.png"
+                    alt="Scan to open WiCS Linktree"
+                    fill
+                    className="object-contain p-2"
+                    sizes="128px"
+                  />
+                </a>
+                <p className="font-body text-xs text-slate-500">
                   Scan to follow our Linktree
                 </p>
               </div>

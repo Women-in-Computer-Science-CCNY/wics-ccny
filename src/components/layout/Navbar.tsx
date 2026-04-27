@@ -11,6 +11,7 @@ const navLinks = [
   { label: "What We Do", href: "#what-we-do" },
   { label: "Events", href: "#events" },
   { label: "E-Board", href: "#eboard" },
+  { label: "Partners", href: "#partners" },
   { label: "Join", href: "#join" },
 ];
 

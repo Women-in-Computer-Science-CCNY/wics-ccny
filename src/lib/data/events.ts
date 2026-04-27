@@ -12,91 +12,85 @@ export interface WicsEvent {
 export const events: WicsEvent[] = [
   // ── Upcoming ──────────────────────────────────────
   {
-    id: "gbm-bracelet",
-    title: "First GBM: Bracelet Making",
-    date: "Coming Soon",
+    id: "linkedin-workshop",
+    title: "LinkedIn Workshop + Free Headshots",
+    date: "April 28, 2026",
     description:
-      "Kick off the semester with our first General Body Meeting! Come craft bracelets, meet the e-board, and vibe with the community.",
+      "A hands-on workshop on optimizing your LinkedIn — strong headlines, compelling bios, strategic networking. Free professional headshots provided.",
+    type: "upcoming",
+    category: "workshop",
+  },
+  {
+    id: "cozy-movie-study",
+    title: "Cozy Movie + Study Afternoon",
+    date: "May 5, 2026",
+    description:
+      "End-of-semester wind down. Movie playing for anyone who wants to relax, plus quiet space to study before finals. Pizza and hot chocolate provided.",
     type: "upcoming",
     category: "social",
+  },
+
+  // ── Past — Spring 2026 (most recent first) ───────
+  {
+    id: "hla-embedded",
+    title: "Intro to Embedded Coding (WiCS × HLA)",
+    date: "April 23, 2026",
+    description:
+      "Co-hosted with HLA — learn how computer science is used in the avionics industry, with a hands-on intro to PlatformIO.",
+    type: "past",
+    category: "workshop",
   },
   {
     id: "strong-women-panel",
     title: "Strong Women in CS Panel",
-    date: "Spring 2026",
+    date: "April 16, 2026",
     description:
-      "Hear from women who've built careers at leading tech companies. Get real advice on navigating the industry.",
-    type: "upcoming",
+      "A career panel featuring women in tech sharing their journeys, challenges, and advice for breaking into the field. Open to all majors and years.",
+    type: "past",
     category: "panel",
   },
   {
-    id: "linkedin-workshop",
-    title: "LinkedIn Profile Workshop",
-    date: "Spring 2026",
+    id: "badminton-social",
+    title: "WiCS × Badminton Social",
+    date: "March 31, 2026",
     description:
-      "Polish your professional presence. We'll walk through building a profile that actually gets you noticed.",
-    type: "upcoming",
-    category: "workshop",
-  },
-  {
-    id: "columbia-tbi",
-    title: "Columbia TBI Tech Conference",
-    date: "Spring 2026",
-    description:
-      "Join us at the Columbia TBI Tech Conference — a great opportunity to network and learn from industry leaders.",
-    type: "upcoming",
-    category: "conference",
-  },
-  {
-    id: "beaverhacks",
-    title: "BeaverHacks Hackathon",
-    date: "Spring 2026",
-    description:
-      "Our signature 2-day hackathon co-hosted with ACM, SWE, and GWC. All majors welcome — no prior experience needed. Prizes, pizza, and workshops.",
-    type: "upcoming",
-    category: "hackathon",
-  },
-  // ── Past ──────────────────────────────────────────
-  {
-    id: "engineering-olympics",
-    title: "Engineering Olympics at CCNY",
-    date: "2025",
-    description:
-      "A fun, competitive engineering challenge event held on campus.",
+      "Co-hosted with the Badminton Club — open play, casual matches, no experience required. A break from classes for everyone.",
     type: "past",
     category: "social",
   },
   {
-    id: "quantum-workshop",
-    title: "Quantum Computing Workshop",
-    date: "2025",
+    id: "synapse-conference",
+    title: "Columbia Synapse: Crossroads in TBI",
+    date: "March 27, 2026",
     description:
-      "From BITS to QUBITS and Beyond — an intro to quantum computing concepts.",
+      "Columbia's student-organized Traumatic Brain Injury conference, exploring the intersection of patient-centered care and biomedical innovation.",
+    type: "past",
+    category: "conference",
+  },
+  {
+    id: "leetcode-jeopardy",
+    title: "LeetCode + CS Jeopardy",
+    date: "March 19, 2026",
+    description:
+      "Interactive Jeopardy-style game covering algorithms, data structures, and LeetCode-style problems. Technical interview practice with friends.",
     type: "past",
     category: "workshop",
   },
   {
-    id: "tech-panel",
-    title: "WiCS Tech Panel",
-    date: "2025",
-    description: "Featuring speakers from Amazon, Proof Trading, and MadHive.",
-    type: "past",
-    category: "panel",
-  },
-  {
-    id: "mind-machines",
-    title: "Mind + Machines Workshop",
-    date: "2025",
-    description: "A Philosophy × WiCS Club Collab exploring AI and ethics.",
-    type: "past",
-    category: "workshop",
-  },
-  {
-    id: "figma-workshop",
-    title: "Guided Figma Prototyping Workshop",
-    date: "2024",
+    id: "first-gbm",
+    title: "First GBM + Bracelet Making",
+    date: "March 12, 2026",
     description:
-      "Hands-on prototyping session teaching students industry-standard design tools.",
+      "Our first General Body Meeting — a short intro to WiCS's mission, e-board, and semester plans, followed by friendship bracelet making.",
+    type: "past",
+    category: "social",
+  },
+  {
+    id: "ctp-info",
+    title: "CUNY Tech Prep Info Session (with GWC + ACM)",
+    date: "March 5, 2026",
+    description:
+      "Co-hosted with GWC and ACM — an info session and pitching workshop covering CUNY Tech Prep's free year-long full-stack and data science tracks.",
     type: "past",
     category: "workshop",
   },
