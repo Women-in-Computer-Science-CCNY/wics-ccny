@@ -79,7 +79,7 @@ export function WhatWeDo() {
   return (
     <section
       id="what-we-do"
-      className="relative py-24 md:py-32 overflow-hidden"
+      className="relative py-16 md:py-24 overflow-hidden"
     >
       <PixelCloud
         size="lg"

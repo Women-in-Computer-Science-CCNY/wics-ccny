@@ -7,9 +7,6 @@ import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 
 export function Hero() {
-  const scrollToAbout = () => {
-    document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section
@@ -126,7 +123,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.35 }}
             className="space-y-3"
           >
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.05] text-violet-deep">
+            <h1 className="font-display text-5xl md:text-7xl font-semibold leading-[1.05] text-violet-deep">
               Women in{" "}
               <span className="italic text-gradient">Computer Science</span>
             </h1>
@@ -159,14 +156,14 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.65 }}
             className="flex flex-col sm:flex-row items-center gap-4"
           >
-            <Button href="#join" size="lg">
-              Join WiCS ✦
-            </Button>
             <Button
-              href="#about"
-              variant="secondary"
+              href="https://linktr.ee/wics_ccny"
+              external
               size="lg"
             >
+              Join WiCS ✦
+            </Button>
+            <Button href="/about" variant="secondary" size="lg">
               Learn More
             </Button>
           </motion.div>
@@ -201,13 +198,12 @@ export function Hero() {
       </div>
 
       {/* ── Scroll indicator ── */}
-      <motion.button
-        onClick={scrollToAbout}
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-400 hover:text-violet-deep transition-colors group"
-        aria-label="Scroll down"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-400"
+        aria-hidden="true"
       >
         <span className="font-body text-xs tracking-widest uppercase">
           Scroll
@@ -218,7 +214,7 @@ export function Hero() {
         >
           <ArrowDown size={16} />
         </motion.div>
-      </motion.button>
+      </motion.div>
     </section>
   );
 }

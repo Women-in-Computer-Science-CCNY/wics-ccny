@@ -131,7 +131,7 @@ export function EBoard() {
   return (
     <section
       id="eboard"
-      className="relative py-24 md:py-32 overflow-hidden"
+      className="relative py-16 md:py-24 overflow-hidden"
     >
       {/* Pixel grid decoration */}
       <div
@@ -213,7 +213,7 @@ export function EBoard() {
             <p className="font-body text-sm text-slate-600">
               Interested in joining the e-board?{" "}
               <a
-                href="#join"
+                href="/join"
                 className="font-semibold text-lavender-500 hover:text-lavender-600 transition-colors"
               >
                 Stay connected for announcements

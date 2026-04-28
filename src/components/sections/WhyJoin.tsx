@@ -53,7 +53,7 @@ const reasons = [
 
 export function WhyJoin() {
   return (
-    <section id="why-join" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="why-join" className="relative py-16 md:py-24 overflow-hidden">
       <PixelCloud
         size="xl"
         variant="sky"
@@ -116,7 +116,7 @@ export function WhyJoin() {
             <p className="font-body text-slate-500">
               Ready to be part of something great?
             </p>
-            <Button href="#join" size="lg">
+            <Button href="/join" size="lg">
               Join WiCS Today ✦
             </Button>
           </div>

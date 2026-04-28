@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, ExternalLink } from "lucide-react";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { StaggerContainer, staggerItem } from "@/components/ui/AnimatedSection";
 import { upcomingEvents, pastEvents, type WicsEvent } from "@/lib/data/events";
 
@@ -68,15 +67,8 @@ export function Events() {
   const events = activeTab === "upcoming" ? upcomingEvents : pastEvents;
 
   return (
-    <section id="events" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="events" className="relative py-16 md:py-24 overflow-hidden">
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
-        <SectionHeader
-          eyebrow="Events"
-          title="Always something happening."
-          subtitle="From technical workshops to social events, there's always a reason to show up."
-          className="mb-12"
-        />
-
         {/* Tab switcher */}
         <div className="flex justify-center mb-10">
           <div className="inline-flex p-1 rounded-2xl bg-lavender-100 gap-1">
@@ -129,7 +121,7 @@ export function Events() {
           >
             Follow our socials for exact dates and times →{" "}
             <a
-              href="#join"
+              href="/join"
               className="text-lavender-500 font-semibold hover:underline"
             >
               Join our LinkTree

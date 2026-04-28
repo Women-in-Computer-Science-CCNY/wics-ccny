@@ -1,14 +1,9 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
-import { About } from "@/components/sections/About";
-import { WhatWeDo } from "@/components/sections/WhatWeDo";
-import { WhyJoin } from "@/components/sections/WhyJoin";
 import { BeaverHacksBanner } from "@/components/sections/BeaverHacksBanner";
-import { Events } from "@/components/sections/Events";
-import { EBoard } from "@/components/sections/EBoard";
-import { Partners } from "@/components/sections/Partners";
-import { Join } from "@/components/sections/Join";
+import { HomeExplore } from "@/components/sections/HomeExplore";
+import { HomeCTA } from "@/components/sections/HomeCTA";
 
 export default function Home() {
   return (
@@ -16,14 +11,9 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <WhatWeDo />
         <BeaverHacksBanner />
-        <WhyJoin />
-        <Events />
-        <EBoard />
-        <Partners />
-        <Join />
+        <HomeExplore />
+        <HomeCTA />
       </main>
       <Footer />
     </>

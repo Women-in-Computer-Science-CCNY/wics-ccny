@@ -47,7 +47,7 @@ const socials = [
 
 export function Join() {
   return (
-    <section id="join" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="join" className="relative py-16 md:py-24 overflow-hidden">
       {/* Glow effects */}
       <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-lavender-300/25 blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-blush-300/20 blur-3xl" />

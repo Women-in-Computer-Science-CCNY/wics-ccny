@@ -75,14 +75,14 @@ export function BeaverHacksBanner() {
                   </motion.div>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button
-                      href="#events"
+                      href="/events"
                       size="md"
                       variant="secondary"
                     >
                       Learn More
                     </Button>
                     <Button
-                      href="#join"
+                      href="/join"
                       size="md"
                       className="bg-violet-deep text-white border border-white/30 hover:bg-violet-deep/90"
                     >

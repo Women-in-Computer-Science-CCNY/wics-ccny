@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { AnimatedSection, StaggerContainer, staggerItem } from "@/components/ui/AnimatedSection";
 import { PixelCloud } from "@/components/ui/PixelCloud";
 
@@ -34,7 +33,7 @@ const pillars = [
 
 export function About() {
   return (
-    <section id="about" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="about" className="relative py-16 md:py-24 overflow-hidden">
       {/* Decorative cloud */}
       <PixelCloud
         size="xl"
@@ -43,18 +42,10 @@ export function About() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
-        <SectionHeader
-          eyebrow="Who We Are"
-          title="More than a club."
-          titleGradient
-          subtitle="WiCS is a student-led organization dedicated to supporting and empowering women and underrepresented students in technology at CCNY."
-          className="mb-16"
-        />
-
         {/* Mission statement card */}
         <AnimatedSection delay={0.1} className="mb-16">
-          <div className="relative rounded-4xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-lavender-100 via-sky-100 to-blush-100" />
+          <div className="relative rounded-4xl overflow-hidden shadow-card-hover ring-1 ring-lavender-200/60">
+            <div className="absolute inset-0 bg-white/75 backdrop-blur-md" />
             <div className="relative p-8 md:p-12">
               <div className="flex items-start gap-4 md:gap-6">
                 <div className="hidden md:flex w-12 h-12 rounded-2xl bg-white/70 items-center justify-center text-2xl flex-shrink-0 shadow-soft">

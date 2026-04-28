@@ -1,5 +1,6 @@
 import { PixelCloud } from "@/components/ui/PixelCloud";
 import Image from "next/image";
+import Link from "next/link";
 
 const socialLinks = [
   {
@@ -87,18 +88,21 @@ export function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-2">
-              {["About", "What We Do", "Events", "E-Board", "Join Us"].map(
-                (item) => (
-                  <li key={item}>
-                    <a
-                      href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                      className="font-body text-sm text-slate-500 hover:text-violet-deep transition-colors"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
+              {[
+                { label: "About", href: "/about" },
+                { label: "Events", href: "/events" },
+                { label: "Partners", href: "/partners" },
+                { label: "Join", href: "/join" },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="font-body text-sm text-slate-500 hover:text-violet-deep transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

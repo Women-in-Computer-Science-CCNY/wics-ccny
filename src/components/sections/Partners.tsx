@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Mail, ArrowRight } from "lucide-react";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
   AnimatedSection,
   StaggerContainer,
@@ -58,17 +57,9 @@ export function Partners() {
   return (
     <section
       id="partners"
-      className="relative py-24 md:py-32 overflow-hidden"
+      className="relative py-16 md:py-24 overflow-hidden"
     >
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
-        <SectionHeader
-          eyebrow="For Companies"
-          title="Partner with WiCS."
-          titleGradient
-          subtitle="We're building the next generation of women in tech — and we'd love to do it alongside organizations that share that goal."
-          className="mb-16"
-        />
-
         {/* Pitch card with stats */}
         <AnimatedSection delay={0.1} className="mb-12">
           <div className="relative rounded-4xl overflow-hidden">
@@ -162,7 +153,7 @@ export function Partners() {
                   Email us
                 </Button>
                 <a
-                  href="#join"
+                  href="/join"
                   className="inline-flex items-center gap-1.5 font-body text-sm font-semibold text-white/90 hover:text-white transition-colors"
                 >
                   Or follow our socials first
