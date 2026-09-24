@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Nunito:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lavender-100: #ede9fe;
+  --lavender-300: #c4b5fd;
+  --lavender-400: #a78bfa;
+  --sky-200: #bae6fd;
+  --sky-300: #7dd3fc;
+  --blush-200: #fce7f3;
+  --blush-300: #fbcfe8;
+  --blush-400: #f9a8d4;
+  --violet-deep: #2d1b69;
+  --cream: #fafafe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", system-ui, sans-serif;
+  background-color: var(--cream);
+  color: var(--violet-deep);
+  overflow-x: hidden;
+}
+
+/* ── Pixel art rendering ── */
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* ── Glass morphism utility ── */
+.glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(196, 181, 253, 0.25);
+}
+
+.glass-dark {
+  background: rgba(196, 181, 253, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(196, 181, 253, 0.3);
+}
+
+/* ── Noise texture overlay ── */
+.noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--lavender-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--lavender-300);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lavender-400);
+}
+
+/* ── Selection ── */
+::selection {
+  background: var(--lavender-300);
+  color: var(--violet-deep);
+}
+
+/* ── Focus ring ── */
+:focus-visible {
+  outline: 2px solid var(--lavender-400);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ── Pixel decoration dots ── */
+.pixel-dot {
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  display: inline-block;
+}
+
+/* ── Wave divider ── */
+.wave-divider {
+  position: relative;
+}
+.wave-divider::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: var(--cream);
+  clip-path: ellipse(55% 100% at 50% 0%);
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #8b5cf6, #38bdf8, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-purple {
+    background: linear-gradient(135deg, #7c3aed, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .border-gradient {
+    border: 1px solid transparent;
+    background-clip: padding-box;
+  }
+}
